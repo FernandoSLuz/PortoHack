@@ -1,5 +1,5 @@
 <?php
-
+include('globals.php');
 //$link = mysqli_connect("127.0.0.1", "my_user", "my_password", "my_db");
 
 include('sql_connect.php');
@@ -16,3 +16,9 @@ echo "Host information: " . mysqli_get_host_info($link) . PHP_EOL;
 
 mysqli_close($link);
 ?>
+
+<html>
+  <head>
+    <title><?php echo $appName?><title>
+  </head>
+</html>
