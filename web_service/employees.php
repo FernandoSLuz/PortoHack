@@ -1,3 +1,7 @@
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+?>
 <?php include('main/header.php');?>
 <h1>Funcionários</h1>
 <h2>Novo funcionário</h2>
