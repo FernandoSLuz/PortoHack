@@ -25,7 +25,6 @@ mysqli_close($link);
   <head>
     <title><?php echo $appName?></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="@{'/public/stylesheets/datatables-bootstrap.css'}"/>
 
     <style>
       body{
@@ -34,7 +33,16 @@ mysqli_close($link);
     </style>
   </head>
   <body>
-    <h3>This is a layout test</h3>
-    <p>Hello</p>
+    <h3><?php echo $appName?></h3>
+    <p>Login</p>
+    <form method="POST" action="auth.php">
+      <label>Nome de usuário</label>
+      <input type="text" name="email" placeholder="E-mail">
+      <br>
+      <label>Senha</label>
+      <input type="password" name="password" placeholder="Senha">
+      <br>
+      <input type="submit" value="Login">
+    </form>
   </body>
 </html>
