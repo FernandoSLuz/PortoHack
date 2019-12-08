@@ -1,9 +1,16 @@
 <?php
 $link = mysqli_connect("localhost", "hacksantos", "user_password", "porto");
-if($link){
-  echo "Deu bom uhul";
+//$link = mysqli_connect("127.0.0.1", "my_user", "my_password", "my_db");
+
+if (!$link) {
+    echo "Error: Unable to connect to MySQL." . PHP_EOL;
+    echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
+    echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
+    exit;
 }
-else{
-  echo "Perdeu 1h";
-}
+
+echo "Success: A proper connection to MySQL was made! The my_db database is great." . PHP_EOL;
+echo "Host information: " . mysqli_get_host_info($link) . PHP_EOL;
+
+mysqli_close($link);
 ?>
