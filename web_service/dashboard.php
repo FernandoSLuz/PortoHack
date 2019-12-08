@@ -23,18 +23,43 @@ ini_set('display_startup_errors', 1);
   <table  id="example" class="display">
 		<thead>
 		<tr>
-			<th style="min-width: 10px;">Quest達o</th>
-			<th style="min-width: 200px;">Data</th>
-      <th style="min-width: 200px;">Excluir quest達o</th>
+			<th style="min-width: 10px;">Terminal</th>
+			<th style="min-width: 200px;">Usuário</th>
+      <th style="min-width: 200px;">Descrição</th>
+      <th style="min-width: 200px;">Data</th>
+      <th style="min-width: 200px;">Tipo</th>
+
 		</tr>
 		</thead>
 
     <tbody>
-    <tr>
-      <td>Teste</td>
-      <td>Teste</td>
-      <td>Teste</td>
-    </tr>
+
+      <?php
+        include('sql_connect.php');
+
+        $sql = "SELECT * FROM Report";
+
+        if($res = mysqli_query($link, $sql)){
+          if(mysqli_num_rows($res)>0){
+            while($row = mysqli_fetch_array($res)){
+              echo "<tr>"
+              echo "<td>".$row['id_Terminal']."</td>";
+              echo "<td>".$row['id_User']."</td>";
+              echo "<td>".$row['description']."</td>";
+              echo "<td>".$row['timestamp']."</td></tr>";
+              echo "<td>".$row['type']."</td></tr>";
+
+            }
+          }
+          else{
+            echo "Não temos solicitações";
+          }
+        }
+        else{
+          echo "Erro de banco";
+        }
+       ?>
+
     </tbody>
   </table>
 
@@ -42,25 +67,7 @@ ini_set('display_startup_errors', 1);
 
 
   <br><br>
-  <?php
-    include('sql_connect.php');
 
-    $sql = "SELECT * FROM Report";
-
-    if($res = mysqli_query($link, $sql)){
-      if(mysqli_num_rows($res)>0){
-        while($row = mysqli_fetch_array($res)){
-          echo "<br>".$row['description'];
-        }
-      }
-      else{
-        echo "Não temos solicitações";
-      }
-    }
-    else{
-      echo "Erro de banco";
-    }
-   ?>
    <br><br>
    <div id="map" style="" >
      <?php
