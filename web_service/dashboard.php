@@ -1,4 +1,8 @@
-<?php include('main/header.php');?>
+<?php include('main/header.php');
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+?>
 <h1>Dashboard</h1>
 
   <br><a href="employees.php">Funcionários</a>
