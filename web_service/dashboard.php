@@ -52,7 +52,7 @@ ini_set('display_startup_errors', 1);
            while($row = mysqli_fetch_array($res)){
              ?>
                <style>
-                  #request2{
+                  #request<?php echo $row['id']?>{
                     display: block;
                     position: relative;
                     top: <?php echo $row['y']?>px;
@@ -63,7 +63,7 @@ ini_set('display_startup_errors', 1);
                     background-color: #3c3;
                   }
                </style>
-               <div id="request2">
+               <div id="request<?php echo $row['id']?>">
                   <a href="#">&nbsp;</a>
                </div>
              <?php
@@ -78,7 +78,7 @@ ini_set('display_startup_errors', 1);
        }
       ?>
      <style>
-        #request1{
+        #request0{
           display: block;
           position: relative;
           top: 50px;
@@ -89,7 +89,7 @@ ini_set('display_startup_errors', 1);
           background-color: #3c3;
         }
      </style>
-     <div id="request1">
+     <div id="request0">
         <a href="#">&nbsp;</a>
      </div>
    </div>
