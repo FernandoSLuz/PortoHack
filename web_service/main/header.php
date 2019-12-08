@@ -4,7 +4,7 @@ include('globals.php');
 ?>
 <?php
 session_start();
-if(!isset($_SESSION['login']) || !($_SESSION['login']) || ($_SESSION['username'])==""){
+if(!isset($_SESSION['login']) || !($_SESSION['login']) || ($_SESSION['email'])==""){
 	header('Location: logout.php');
 }
 ?>

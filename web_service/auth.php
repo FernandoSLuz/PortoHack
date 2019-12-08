@@ -21,7 +21,7 @@ $sql = "SELECT * FROM User WHERE email LIKE '$email'";
 				if($row['password']==$password){
 					echo 'Autenticado';
 					$_SESSION["login"]=true;
-					$_SESSION["username"]=$username;
+					$_SESSION["email"]=$username;
 					header('Location: dashboard.php');
 				}
 				else{
