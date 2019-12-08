@@ -15,7 +15,7 @@ else{
     include_once("../sqlconnect.php");
 
     $sql = "INSERT INTO tkd_dii_images(id, user_id, image_path, name, timestamp) VALUES(null, '".$_REQUEST['id_user']."','".$image_name."','".$_REQUEST['name']."', null)";
-
+    echo "\n".$sql;
     if(mysqli_query($link, $sql)){
       echo " - Cadastrado com sucesso";
     }
