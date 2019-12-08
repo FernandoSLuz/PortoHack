@@ -20,25 +20,25 @@ $sql = "SELECT * FROM `Users` WHERE email LIKE '$email'";
 					echo 'Autenticado';
 					$_SESSION["login"]=true;
 					$_SESSION["username"]=$username;
-					header('Location: index.php?error=Foi');
+					//header('Location: index.php?error=Foi');
 				}
 				else{
 					echo 'Senha inválida';
 					$_SESSION["login"]=false;
-					header('Location: index.php?error='.'Senha inválida');
+					//header('Location: index.php?error='.'Senha inválida');
 				}
 			}
 		}
 		else{
 			echo 'Usuário não encontrado';
 			$_SESSION["login"]=false;
-			header('Location: index.php?error='.'Usuário não encontrado');
+			//header('Location: index.php?error='.'Usuário não encontrado');
 		}
 	}
 	else{
 		echo 'Erro de banco';
 		$_SESSION["login"]=false;
-		header('Location: index.php?error='.'Erro de banco, contate os administradores');
+		//header('Location: index.php?error='.'Erro de banco, contate os administradores');
 	}
 
 ?>
