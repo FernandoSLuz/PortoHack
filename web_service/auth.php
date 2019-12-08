@@ -19,12 +19,14 @@ if (!$link) {
 echo "Success: A proper connection to MySQL was made! The my_db database is great." . PHP_EOL;
 echo "Host information: " . mysqli_get_host_info($link) . PHP_EOL;
 
+echo "<br>";
 
 
 $email = addslashes($_POST['email']);
 $password = addslashes($_POST['password']);
 
 $sql = "SELECT * FROM `Users` WHERE email LIKE '$email'";
+echo $sql;
 	if ($res = mysqli_query($link, $sql)) {
 	    if(mysqli_num_rows($res) > 0){
 			while ($row = mysqli_fetch_array($res)){
