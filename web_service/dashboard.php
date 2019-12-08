@@ -14,9 +14,10 @@
           echo "<br>".$row['description'];
         }
       }
+      else{
+        echo "Não temos solicitações";
+      }
     }
-    else{
-      echo "Não temos solicitações";
-    }
+
    ?>
 <?php include('main/footer.php');?>
