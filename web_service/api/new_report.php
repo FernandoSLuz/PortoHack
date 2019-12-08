@@ -18,6 +18,8 @@ else{
     $sql = "INSERT INTO Report(id, id_Terminal, id_User, type, status, timestamp, media, description)
     VALUES(null, '".$_REQUEST['id_Terminal']."', , '".$_REQUEST['id_User']."',  '".$_REQUEST['type']."', '".$_REQUEST['status']."',CURRENT_TIMESTAMP,'".$image_name."', '".$_REQUEST['description']."')";
 
+    echo "\n".$sql;
+
     if(mysqli_query($link, $sql)){
       echo " - Cadastrado com sucesso";
     }
