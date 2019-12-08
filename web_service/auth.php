@@ -14,7 +14,7 @@ $email = addslashes($_POST['email']);
 $password = addslashes($_POST['password']);
 
 $sql = "SELECT * FROM User WHERE email LIKE '$email'";
-echo $sql;
+
 	if ($res = mysqli_query($link, $sql)) {
 	    if(mysqli_num_rows($res) > 0){
 			while ($row = mysqli_fetch_array($res)){
@@ -22,26 +22,26 @@ echo $sql;
 					echo 'Autenticado';
 					$_SESSION["login"]=true;
 					$_SESSION["username"]=$username;
-					//header('Location: index.php?error=Foi');
+					header('Location: dashboard.php');
 				}
 				else{
 					echo 'Senha inválida';
 					$_SESSION["login"]=false;
-					//header('Location: index.php?error='.'Senha inválida');
+					header('Location: index.php?error='.'Senha inválida');
 				}
 			}
 		}
 		else{
 			echo 'Usuário não encontrado';
 			$_SESSION["login"]=false;
-			//header('Location: index.php?error='.'Usuário não encontrado');
+			header('Location: index.php?error='.'Usuário não encontrado');
 		}
 	}
 	else{
     echo ($mysqli -> error);
 		echo 'Erro de banco';
 		$_SESSION["login"]=false;
-		//header('Location: index.php?error='.'Erro de banco, contate os administradores');
+		header('Location: index.php?error='.'Erro de banco, contate os administradores');
 	}
 
 ?>
