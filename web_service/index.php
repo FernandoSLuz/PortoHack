@@ -24,6 +24,7 @@ mysqli_close($link);
 <html>
   <head>
     <title><?php echo $appName?></title>
+    <link rel="stylesheet" type="text/css" href="@{'/public/stylesheets/datatables-bootstrap.css'}"/>
     <style>
       body{
         padding: 30px;
