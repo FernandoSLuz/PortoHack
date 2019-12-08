@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(!isset($_SESSION['login']) || !($_SESSION['login']) || ($_SESSION['username'])==""){
+	header('Location: logout.php');
+}
+?>
+
 <?php include('main/header.php');?>
 <h1>Dashboard</h1>
 
@@ -9,7 +16,7 @@
     include('sql_connect.php');
 
     $sql = "SELECT * FROM Report";
-    
+
     if($res = mysqli($link, $sql)){
       if(mysqli_num_rows($res)>0){
         while($row = mysqli_fetch_array($res)){

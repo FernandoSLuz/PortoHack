@@ -2,6 +2,12 @@
 include('sql_connect.php');
 include('globals.php');
 ?>
+<?php
+session_start();
+if(!isset($_SESSION['login']) || !($_SESSION['login']) || ($_SESSION['username'])==""){
+	header('Location: logout.php');
+}
+?>
 <html>
   <head>
     <title><?php echo $appName?></title>

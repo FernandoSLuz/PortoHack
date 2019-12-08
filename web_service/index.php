@@ -4,6 +4,12 @@ include('globals.php');
 
 include('sql_connect.php');
 
+session_start();
+if(isset($_SESSION['login']) || ($_SESSION['login']) || ($_SESSION['username'])!=""){
+	header('Location: dashboard.php');
+}
+
+
 //DB TEST
 /*
 if (!$link) {
