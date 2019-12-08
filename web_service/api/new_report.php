@@ -18,8 +18,8 @@ else{
     file_put_contents($file, $image_base64);
     include_once("../sql_connect.php");
 
-    $sql = "INSERT INTO Report(id, id_Terminal, id_User, type, status, timestamp, media, description)
-    VALUES(null, '".$_REQUEST['id_Terminal']."', '".$_REQUEST['id_User']."',  '".$_REQUEST['type']."', '".$_REQUEST['status']."',CURRENT_TIMESTAMP,'".$image_name."', '".$_REQUEST['description']."')";
+    $sql = "INSERT INTO Report(id, id_Terminal, id_User, type, status, timestamp, media, description, x, y)
+    VALUES(null, '".$_REQUEST['id_Terminal']."', '".$_REQUEST['id_User']."',  '".$_REQUEST['type']."', '".$_REQUEST['status']."',CURRENT_TIMESTAMP,'".$image_name."', '".$_REQUEST['description']."', 200, 200)";
 
     //echo "\n".$sql;
 
