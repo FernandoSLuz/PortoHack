@@ -20,6 +20,27 @@ ini_set('display_startup_errors', 1);
   <br><a href="employees.php">Relatórios de performance</a>
   <br><a href="logout.php">Logout</a>
 
+  <table  id="example" class="display">
+		<thead>
+		<tr>
+			<th style="min-width: 10px;">Quest達o</th>
+			<th style="min-width: 200px;">Data</th>
+      <th style="min-width: 200px;">Excluir quest達o</th>
+		</tr>
+		</thead>
+
+    <tbody>
+    <tr>
+      <td>Teste</td>
+      <td>Teste</td>
+      <td>Teste</td>
+    </tr>
+    </tbody>
+  </table>
+
+
+
+
   <br><br>
   <?php
     include('sql_connect.php');
