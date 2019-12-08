@@ -7,7 +7,9 @@
   <br><br>
   <?php
     include('sql_connect.php');
+
     $sql = "SELECT * FROM Report";
+    
     if($res = mysqli($link, $sql)){
       if(mysqli_num_rows($res)>0){
         while($row = mysqli_fetch_array($res)){
@@ -17,6 +19,9 @@
       else{
         echo "Não temos solicitações";
       }
+    }
+    else{
+      echo "Erro de banco";
     }
 
    ?>
