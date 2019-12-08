@@ -6,8 +6,8 @@ ini_set('display_startup_errors', 1);
   <style>
       #map{
         display: block;
-        height: 802px;
-        width: 474px;
+        width: 802px;
+        height: 474px;
         background-color: #ccc;
         background-image: url('./images/mapaporto.jpg');
       }
