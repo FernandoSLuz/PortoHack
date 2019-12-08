@@ -46,7 +46,7 @@ ini_set('display_startup_errors', 1);
               echo "<td>".$row['id_Terminal']."</td>";
               echo "<td>".$row['id_User']."</td>";
               echo "<td>".$row['description']."</td>";
-              echo "<td>".$row['timestamp']."</td></tr>";
+              echo "<td>".$row['timestamp']."</td>";
               echo "<td>".$row['type']."</td></tr>";
 
             }
