@@ -23,7 +23,7 @@ mysqli_close($link);
 
 <html>
   <head>
-    <title><?php echo $appName?><title>
+    <title><?php echo $appName?></title>
     <style>
       body{
         padding: 30px;
