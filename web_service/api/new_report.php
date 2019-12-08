@@ -7,7 +7,7 @@ if(!isset($_REQUEST['id_Terminal']) || !isset($_REQUEST['id_User']) || !isset($_
 }
 else{
 
-    define('UPLOAD_DIR', 'uploadedimages/');
+    define('UPLOAD_DIR', './uploadedimages/');
     $image_parts = explode(";base64,", 'data:image/jpeg;base64,'.$_REQUEST['image']);
     $image_type_aux = explode("image/", $image_parts[0]);
     $image_type = $image_type_aux[1];
