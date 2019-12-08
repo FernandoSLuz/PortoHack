@@ -4,6 +4,8 @@ include('globals.php');
 
 include('sql_connect.php');
 
+//DB TEST
+/*
 if (!$link) {
     echo "Error: Unable to connect to MySQL." . PHP_EOL;
     echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
@@ -15,10 +17,21 @@ echo "Success: A proper connection to MySQL was made! The my_db database is grea
 echo "Host information: " . mysqli_get_host_info($link) . PHP_EOL;
 
 mysqli_close($link);
+*/
+
 ?>
 
 <html>
   <head>
     <title><?php echo $appName?><title>
+    <style>
+      body{
+        padding: 30px;
+      }
+    </style>
   </head>
+  <body>
+    <h3>This is a layout test</h3>
+    <p>Hello</p>
+  </body>
 </html>
