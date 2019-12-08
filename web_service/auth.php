@@ -38,6 +38,7 @@ echo $sql;
 		}
 	}
 	else{
+    echo ($mysqli -> error);
 		echo 'Erro de banco';
 		$_SESSION["login"]=false;
 		//header('Location: index.php?error='.'Erro de banco, contate os administradores');
