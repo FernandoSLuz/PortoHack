@@ -11,6 +11,8 @@ ini_set('display_startup_errors', 1);
         background-color: #ccc;
         background-image: url('./images/map.png');
       }
+
+
   </style>
 <h1>Dashboard</h1>
 
@@ -41,6 +43,17 @@ ini_set('display_startup_errors', 1);
    ?>
    <br><br>
    <div id="map" style="" >
-
+     <style>
+        #request1{
+          display: block;
+          position: relative;
+          top: 50px;
+          left: 50px;
+          background-color: #3c3;
+        }
+     </style>
+     <div id="request1">
+        <a href="#">&nbsp;</a>
+     </div>
    </div>
 <?php include('main/footer.php');?>
