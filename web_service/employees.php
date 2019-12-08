@@ -20,7 +20,7 @@
     }
   }
   else{
-    echo "<br>Erro de banco"
+    echo "<br>Erro de banco";
   }
 
  ?>
