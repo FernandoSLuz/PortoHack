@@ -1,5 +1,5 @@
 <?php
-$link = mysqli_connect("localhost", "hacksantos", "user_password", "porto");
+$link = mysqli_connect("localhost", "hack", "porto", "porto");
 //$link = mysqli_connect("127.0.0.1", "my_user", "my_password", "my_db");
 
 if (!$link) {
