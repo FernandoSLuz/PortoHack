@@ -1,5 +1,5 @@
 <?php
-include(',,/sql_connect.php');
+include('../sql_connect.php');
 
 
 ini_set('display_errors', 1);
