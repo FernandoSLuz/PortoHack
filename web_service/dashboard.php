@@ -42,7 +42,7 @@ ini_set('display_startup_errors', 1);
         if($res = mysqli_query($link, $sql)){
           if(mysqli_num_rows($res)>0){
             while($row = mysqli_fetch_array($res)){
-              echo "<tr>"
+              echo "<tr>";
               echo "<td>".$row['id_Terminal']."</td>";
               echo "<td>".$row['id_User']."</td>";
               echo "<td>".$row['description']."</td>";
