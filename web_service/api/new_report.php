@@ -13,7 +13,7 @@ else{
     $file = UPLOAD_DIR . $image_name . '.jpg';
     echo "id : ".$_REQUEST['id_Terminal']." - image: ".$image_name;
     file_put_contents($file, $image_base64);
-    include_once("../sqlconnect.php");
+    include_once("../sql_connect.php");
 
     $sql = "INSERT INTO Report(id, id_Terminal, id_User, type, status, timestamp, media, description)
     VALUES(null, '".$_REQUEST['id_Terminal']."', '".$_REQUEST['id_User']."',  '".$_REQUEST['type']."', '".$_REQUEST['status']."',CURRENT_TIMESTAMP,'".$image_name."', '".$_REQUEST['description']."')";
