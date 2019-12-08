@@ -88,7 +88,7 @@ ini_set('display_startup_errors', 1);
                     height: 20px; width: 20px;
                     border-radius: 10px;
                     border: solid 2px #000;
-                    background-color: <?php ($row['id'] == 1 ? echo #3c3: echo #c33); ;
+                    background-color: <?php if($row['id'] == 1)  echo #3c3; else echo #c33; ;
                   }
                </style>
                <div id="request<?php echo $row['id']?>">
