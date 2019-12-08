@@ -5,7 +5,7 @@ include('globals.php');
 include('sql_connect.php');
 
 session_start();
-if(isset($_SESSION['login']) || ($_SESSION['login']) || ($_SESSION['username'])!=""){
+if(isset($_SESSION['login']) || ($_SESSION['login']) || ($_SESSION['email'])!=""){
 	header('Location: dashboard.php');
 }
 
