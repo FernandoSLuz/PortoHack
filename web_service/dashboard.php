@@ -49,6 +49,9 @@ ini_set('display_startup_errors', 1);
           position: relative;
           top: 50px;
           left: 50px;
+          height: 30px; width: 30px;
+          border-radius: 15px;
+          border: solid 1px #000;
           background-color: #3c3;
         }
      </style>
