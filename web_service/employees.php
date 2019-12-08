@@ -1,9 +1,11 @@
 <?php include('main/header.php');?>
 <h1>Funcionários</h1>
 <h2>Novo funcionário</h2>
+<form method="POST" action="employees_new_action.php">
 <input type="text" name="name" placeholder="Nome Completo">
 <input type="text" name="phone" placeholder="Telefone">
 <input type="submit" value="Cadastrar">
+</form>
 
 <?php
   include_once('sql_connect.php');
