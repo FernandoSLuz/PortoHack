@@ -3,6 +3,15 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 ?>
+  <style>
+      #map{
+        display: block;
+        height: 691px;
+        width: 966px;
+        background-color: #ccc;
+        background-image: url('./images/map.png');
+      }
+  </style>
 <h1>Dashboard</h1>
 
   <br><a href="employees.php">Funcionários e Números</a>
@@ -30,4 +39,8 @@ ini_set('display_startup_errors', 1);
     }
 
    ?>
+   <br><br>
+   <div id="map" style="" >
+
+   </div>
 <?php include('main/footer.php');?>
