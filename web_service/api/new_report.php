@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+
 if(!isset($_REQUEST['id_Terminal']) || !isset($_REQUEST['id_User']) || !isset($_REQUEST['media'])){
     echo "Campos n達o preenchidos corretamente.";
 }
