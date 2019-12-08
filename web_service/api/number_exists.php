@@ -1,6 +1,9 @@
 <?php
 include(',,/sql_connect.php');
 
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
 $phone = $_GET['phone'];
 
 $sql = 'SELECT * FROM PhoneNumbers WHERE phone LIKE "'.$phone.'"';
