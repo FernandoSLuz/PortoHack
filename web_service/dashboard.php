@@ -11,6 +11,7 @@
     $sql = "SELECT * FROM Report";
 
     if($res = mysqli($link, $sql)){
+      echo "Fiz a solicitação";
       if(mysqli_num_rows($res)>0){
         while($row = mysqli_fetch_array($res)){
           echo "<br>".$row['description'];
