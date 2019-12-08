@@ -5,7 +5,8 @@ ini_set('display_startup_errors', 1);
 ?>
 <h1>Dashboard</h1>
 
-  <br><a href="employees.php">Funcionários</a>
+  <br><a href="employees.php">Funcionários e Números</a>
+  <br><a href="employees.php">Relatórios de performance</a>
   <br><a href="logout.php">Logout</a>
 
   <br><br>
