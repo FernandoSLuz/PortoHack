@@ -13,7 +13,7 @@ include('sql_connect.php');
 $email = addslashes($_POST['email']);
 $password = addslashes($_POST['password']);
 
-$sql = "SELECT * FROM `User` WHERE email LIKE '$email'";
+$sql = "SELECT * FROM User WHERE email LIKE '$email'";
 echo $sql;
 	if ($res = mysqli_query($link, $sql)) {
 	    if(mysqli_num_rows($res) > 0){
